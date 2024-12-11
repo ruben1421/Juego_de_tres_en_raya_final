@@ -19,17 +19,16 @@ public class juego_tres_en_raya_original {
 	       
 		    
 		    
+		    // Aqui es donde se inicia el juego, pidiendo que cada jugador ingrese un nombre 
 		    
+		    System.out.print("Jugador 1, ingresa tu nombre: ");
+            String nombreJugador1 = s.nextLine();
+            System.out.print("Jugador 2, ingresa tu nombre: ");
+            String nombreJugador2 = s.nextLine();
+
 		    boolean jugarDeNuevo = true;
 	        while (jugarDeNuevo) {
-	            
-	        // Aqui es donde se inicia el juego, pidiendo que cada jugador ingrese un nombre 	
-	        
-	            System.out.print("Jugador 1, ingresa tu nombre: ");
-	            String nombreJugador1 = s.nextLine();
-	            System.out.print("Jugador 2, ingresa tu nombre: ");
-	            String nombreJugador2 = s.nextLine();
-
+	  
 	         //Introducimos el tablero que en este caso para el juego es una matriz 
 	            //3x3 
 	            
