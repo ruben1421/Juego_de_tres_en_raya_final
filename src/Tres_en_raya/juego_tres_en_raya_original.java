@@ -151,8 +151,20 @@ public class juego_tres_en_raya_original {
 	             //Aqui imprimimos cual de los juagadores ha ganado 
 	                
 	                if (haGanado) {
-	                    System.out.println("¡El jugador " + jugadorNombre + " ha ganado!");
+	                	 System.out.println("Tablero actual:");
+	 	                for (int i = 0; i < 3; i++) {
+	 	                    for (int j = 0; j < 3; j++) {
+	 	                        System.out.print(tablero[i][j] + " ");  // Aqui decimos que se separe 
+	 	                        										// Con un espacio la matriz del tablero 
+	 	                    }
+	 	                    System.out.println(); 
+	 	                }
+	                	
+	                	System.out.println("¡El jugador " + jugadorNombre + " ha ganado!");
 	                    juegoActivo = false;
+	                    
+	                    
+	                    
 	                }
 	                
 	                //Aqui indicamos cuando ocurre un empate 
@@ -167,6 +179,15 @@ public class juego_tres_en_raya_original {
 	                    }
 	                }
 	                if (empate) {
+	                	 System.out.println("Tablero actual:");
+	 	                for (int i = 0; i < 3; i++) {
+	 	                    for (int j = 0; j < 3; j++) {
+	 	                        System.out.print(tablero[i][j] + " ");  // Aqui decimos que se separe 
+	 	                        										// Con un espacio la matriz del tablero 
+	 	                    }
+	 	                    System.out.println(); 
+	 	                }
+	                	
 	                    System.out.println("¡Es un empate!");
 	                    juegoActivo = false;
 	                }
