@@ -161,7 +161,7 @@ public class juego_tres_en_raya_original {
 	 	                    System.out.println(); 
 	 	                }
 	                	
-	                	System.out.println("¡El jugador " + jugadorNombre + " ha ganado!, bien jugado " + jugadorNombre2);
+	                	System.out.println("¡El jugador " + jugadorNombre + " ha ganado!, bien jugado " + jugadorNombre2 + "👍");
 	                	System.out.println("  _____ _   _ _____   _   _ _   _    ____ ____      _    _   _ \r\n"
 	                			+ " |  ___| | | | ____| | | | | \\ | |  / ___|  _ \\    / \\  | \\ | |\r\n"
 	                			+ " | |_  | | | |  _|   | | | |  \\| | | |  _| |_) |  / _ \\ |  \\| |\r\n"
