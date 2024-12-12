@@ -64,7 +64,7 @@ public class juego_tres_en_raya_original {
 	            Random random = new Random();
 	            int resultadoSorteo = random.nextInt(2) + 1;
 
-	          // Aqui indicamos que si en el sorteo salio 1cara decimos que comienza el nombreJugador1 y si no el 
+	          // Aqui indicamos que si en el sorteo salio 1 = cara, decimos que comienza el nombreJugador1 y si no el 
 	            // El nombreJugador2
 	            
 	            if (resultadoSorteo == 1) {
@@ -94,6 +94,7 @@ public class juego_tres_en_raya_original {
 	                //la posicion de su ficha en el tablero indicandole que ingrese el numero de filas 
 	                //y de Columnas.
 	                String jugadorNombre = (jugadorActual == 'X') ? nombreJugador1 : nombreJugador2;
+	                String jugadorNombre2 = (jugadorActual == 'O') ? nombreJugador1 : nombreJugador2;
 	                System.out.println("Turno de " + jugadorNombre + " (" + jugadorActual + ")");
 	                System.out.print("Ingresa la fila (0-2): ");
 	                int fila = s.nextInt();
@@ -160,8 +161,21 @@ public class juego_tres_en_raya_original {
 	 	                    System.out.println(); 
 	 	                }
 	                	
-	                	System.out.println("¡El jugador " + jugadorNombre + " ha ganado!");
+	                	System.out.println("¡El jugador " + jugadorNombre + " ha ganado!, bien jugado " + jugadorNombre2);
+	                	System.out.println("  _____ _   _ _____   _   _ _   _    ____ ____      _    _   _ \r\n"
+	                			+ " |  ___| | | | ____| | | | | \\ | |  / ___|  _ \\    / \\  | \\ | |\r\n"
+	                			+ " | |_  | | | |  _|   | | | |  \\| | | |  _| |_) |  / _ \\ |  \\| |\r\n"
+	                			+ " |  _| | |_| | |___  | |_| | |\\  | | |_| |  _ <  / ___ \\| |\\  |\r\n"
+	                			+ " |_|  _ \\___/|_____|__\\___/|_| \\_|  \\____|_| \\_\\/_/   \\_\\_| \\_|\r\n"
+	                			+ "     | | | | | ____/ ___|/ _ \\                                 \r\n"
+	                			+ "  _  | | | | |  _|| |  _| | | |                                \r\n"
+	                			+ " | |_| | |_| | |__| |_| | |_| |                                \r\n"
+	                			+ "  \\___/ \\___/|_____\\____|\\___/                ");
+	                	
+	                	
 	                    juegoActivo = false;
+	                    
+	                    
 	                    
 	                    
 	                    
@@ -178,12 +192,18 @@ public class juego_tres_en_raya_original {
 	                        }
 	                    }
 	                }
+	                
+	               // Aqui indicamos que si hay un ganador no se ejecute tambien como empate
 	                if (empate) {
+	                	if(haGanado) {
+	                		empate = false;
+	                		break;
+	                	}
 	                	 System.out.println("Tablero actual:");
 	 	                for (int i = 0; i < 3; i++) {
 	 	                    for (int j = 0; j < 3; j++) {
 	 	                        System.out.print(tablero[i][j] + " ");  // Aqui decimos que se separe 
-	 	                        										// Con un espacio la matriz del tablero 
+	 	                     										// Con un espacio la matriz del tablero 
 	 	                    }
 	 	                    System.out.println(); 
 	 	                }
@@ -216,7 +236,23 @@ public class juego_tres_en_raya_original {
 	            	// Si no se da el juego por terminado 
 	            	
 	                jugarDeNuevo = false;
-	                System.out.println("Gracias por jugar. ¡Hasta la próxima!");
+	                System.out.println("  ____ ____      _    ____ ___    _    ____    ____   ___  ____  \r\n"
+	                		+ "  / ___|  _ \\    / \\  / ___|_ _|  / \\  / ___|  |  _ \\ / _ \\|  _ \\ \r\n"
+	                		+ " | |  _| |_) |  / _ \\| |    | |  / _ \\ \\___ \\  | |_) | | | | |_) |\r\n"
+	                		+ " | |_| |  _ <  / ___ \\ |___ | | / ___ \\ ___) | |  __/| |_| |  _ < \r\n"
+	                		+ "  \\____|_| \\_\\/_/__ \\_\\____|___/_/   \\_\\____/  |_|    \\___/|_| \\_\\\r\n"
+	                		+ "     | | | | |/ ___|  / \\  |  _ \\                                 \r\n"
+	                		+ "  _  | | | | | |  _  / _ \\ | |_) |                                \r\n"
+	                		+ " | |_| | |_| | |_| |/ ___ \\|  _ <                                 \r\n"
+	                		+ "  \\___/ \\___/_\\____/_/ __\\_\\_|_\\_\\   _        _                   \r\n"
+	                		+ " (_) | | |  / \\  / ___|_   _|/ \\    | |      / \\                  \r\n"
+	                		+ " | | |_| | / _ \\ \\___ \\ | | / _ \\   | |     / _ \\                 \r\n"
+	                		+ " | |  _  |/ ___ \\ ___) || |/ ___ \\  | |___ / ___ \\                \r\n"
+	                		+ " |_|_| |_/_/   \\_\\____/_|_/_/_  \\_\\ |_____/_/   \\_\\               \r\n"
+	                		+ " |  _ \\|  _ \\ / _ \\ \\/ /_ _|  \\/  |  / \\  | |                     \r\n"
+	                		+ " | |_) | |_) | | | \\  / | || |\\/| | / _ \\ | |                     \r\n"
+	                		+ " |  __/|  _ <| |_| /  \\ | || |  | |/ ___ \\|_|                     \r\n"
+	                		+ " |_|   |_| \\_\\\\___/_/\\_\\___|_|  |_/_/   \\_(_)   ");
 	            }
 	            
 	    }
